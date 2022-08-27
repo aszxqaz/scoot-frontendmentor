@@ -71,7 +71,7 @@
       left: calc(100% + 40px);
       width: 450px;
       height: 200%;
-      background: url('./images/right-arrow.svg') no-repeat calc((min(100vw, 1340px) - 1340px) / 1.5) 0;
+      background: url('../images/right-arrow.svg') no-repeat calc((min(100vw, 1340px) - 1340px) / 1.5) 0;
       background-size: contain;
     }
   }
@@ -82,12 +82,12 @@
     background-image: 
       linear-gradient(rgb(255 255 255 / 20%), rgb(255 255 255 / 20%)),
       linear-gradient(rgba(13 0 72 / 80%), rgb(13 0 72 / 80%)),
-      url('./images/home-bg-tablet.jpg');
+      url('../images/home-bg-tablet.jpg');
     background-size: 100% 100%, 100% 100%, cover;
     // background-position: 0 0, 0 0, 70% 70%;
 
     &__container {
-      background-image: url("./images/right-arrow.svg"), url("./images/circles.svg");
+      background-image: url("../images/right-arrow.svg"), url("../images/circles.svg");
       background-repeat: no-repeat;
       background-position: calc((min(100vw, 1048px) - 1048px) / 2 - 100px) 90%, 105% 90%;
       // calc((min(100vw, 1340px) - 1340px) / 2)
@@ -114,7 +114,7 @@
 
   @media (max-width: 600px) {
     &__container {
-      background-image: url("./images/right-arrow.svg");
+      background-image: url("../images/right-arrow.svg");
       background-repeat: no-repeat;
       background-position: -310px 90%;
     }
