@@ -3,7 +3,7 @@ const $close = document.getElementById('burger-close');
 const $nav = document.getElementById('nav')
 
 export function burgerInit() {
-  const toggle: EventListener = (e) => {
+  const toggle = () => {
     $burger?.classList.toggle('hidden')
     $close?.classList.toggle('hidden')
     $nav?.classList.toggle('opened')
