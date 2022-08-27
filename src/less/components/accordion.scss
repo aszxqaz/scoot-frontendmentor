@@ -12,6 +12,7 @@
 }
 
 .accordion-icon {
+  flex: 0 0 14px;
   display: flex;
   align-items: center;
 
@@ -29,4 +30,9 @@
   &:not(.open)>*:first-child {
     margin-bottom: 0;
   }
+
+  &__header {
+    gap: 16px;
+  }
+
 }

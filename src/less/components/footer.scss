@@ -1,9 +1,9 @@
 .footer {
-  background-color: #333A44;
+  background-color: #333a44;
 
   height: 96px;
   display: flex;
-  
+
   &__container {
     display: flex;
     flex: 1;
@@ -35,12 +35,21 @@
   &__socials {
     display: flex;
     gap: 24px;
+
+    svg {
+      @media (any-hover: hover) {
+        &:hover {
+          fill: var(--color-light-grey);
+        }
+      }
+    }
   }
 
   @media (max-width: 768px) {
     height: 438px;
 
-    &__container, &__list {
+    &__container,
+    &__list {
       flex-direction: column;
     }
 

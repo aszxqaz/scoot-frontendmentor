@@ -1,7 +1,17 @@
+@use '../global/utils.scss' as *;
+
 .about {
+  margin-bottom: responsive(375px, 1440px, 100px, 200px);
   
   &__heading-wrapper {
+    position: relative;
     background-image: url('images/about.webp');
+  }
+
+  &__heading {
+    @media (max-width: 600px) {
+      text-align: center;
+    }
   }
 
 }

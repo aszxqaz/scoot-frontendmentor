@@ -1,8 +1,11 @@
 @use '../global/utils.scss' as *;
 
 .mottos {
-  padding-top: responsive(375px, 1440px, 100px, 160px);
-  padding-bottom: 80px;
+  margin-top: responsive(375px, 1440px, 100px, 160px);
+  margin-bottom: responsive(768px, 1440px, 145px, 200px);
+  @media (max-width: 768px) {
+    margin-bottom: responsive(375px, 768px, 120px, 145px);
+  }
 
   &__container {
     display: flex;
@@ -69,7 +72,6 @@
   @media (max-width: 1048px) {
     flex-direction: row;
     gap: responsive(650px, 1048px, 40px, 80px);
-
   }
 
   @media (max-width: 670px) {

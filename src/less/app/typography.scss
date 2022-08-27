@@ -22,24 +22,33 @@ a, button {
 
 .heading-xl {
   font-size: responsive(375px, 768px, 40px, 56px);
+  font-weight: 700;
   letter-spacing: -2.5px;
   line-height: 1;
 }
 
+[class*="heading-"] {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
 .heading-lg {
   font-size: responsive(375px, 768px, 32px, 48px);
+  font-weight: 700;
   letter-spacing: -2.14px;
   line-height: 1;
 }
 
 .heading-md {
   font-size: 40px;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1.79px;
 }
 
 .heading-sm {
   font-size: 24px;
+  font-weight: 700;
   line-height: 1.166;
   letter-spacing: -1.07px;
 }

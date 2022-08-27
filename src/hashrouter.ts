@@ -23,7 +23,9 @@ export class HashRouter {
         const href = (e.target as HTMLAnchorElement).closest('a')?.getAttribute('href')
         const isSameSite = this.goTo(href || '')
         if (isSameSite) {
+          document.documentElement.style.scrollBehavior = 'auto'
           window.scrollTo({ top: 0, behavior: "auto"})
+          document.documentElement.style.scrollBehavior = 'smooth'
           e.preventDefault();
         }
       });
