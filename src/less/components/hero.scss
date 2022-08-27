@@ -1,0 +1,122 @@
+@use '../global/utils.scss' as *;
+
+.hero {
+  background-image: url('./images/circles.svg'), linear-gradient(to right bottom, #2b384b, #1c2336);
+  background-position: 103% 72%;
+  background-repeat: no-repeat;
+
+  color: white;
+  height: 650px;
+
+  &__heading {
+    max-width: 500px;
+    color: inherit;
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__with-placeholder {
+    display: flex;
+    height: 100%;
+
+    padding-bottom: 152px;
+  }
+
+  &__placeholder {
+    flex-grow: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    height: 100%;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__cta {
+    margin-left: 95px;
+  }
+
+  &__text {
+    position: relative;
+
+    max-width: 500px;
+    padding-left: 95px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 7px);
+    }
+
+    &::before {
+      right: calc(100% - 40px);
+      width: 70vw;
+      height: 15px;
+      background-color: var(--color-yellow);
+    }
+
+    &::after {
+      left: calc(100% + 40px);
+      width: 450px;
+      height: 200%;
+      background: url('./images/right-arrow.svg') no-repeat calc((min(100vw, 1340px) - 1340px) / 1.5) 0;
+      background-size: contain;
+    }
+  }
+
+  @media (max-width: 1048px) {
+    padding-top: responsive(375px, 1048px, 115px, 137px);
+
+    background-image: 
+      linear-gradient(rgb(255 255 255 / 20%), rgb(255 255 255 / 20%)),
+      linear-gradient(rgba(13 0 72 / 80%), rgb(13 0 72 / 80%)),
+      url('./images/home-bg-tablet.jpg');
+    background-size: 100% 100%, 100% 100%, cover;
+    // background-position: 0 0, 0 0, 70% 70%;
+
+    &__container {
+      background-image: url("./images/right-arrow.svg"), url("./images/circles.svg");
+      background-repeat: no-repeat;
+      background-position: calc((min(100vw, 1048px) - 1048px) / 2 - 100px) 90%, 105% 90%;
+      // calc((min(100vw, 1340px) - 1340px) / 2)
+    }
+
+    &__content {
+      align-items: center;
+      justify-content: initial;
+      text-align: center;
+    }
+
+    &__text {
+      padding-left: 0;
+
+      &::before, &::after {
+        display: none;
+      }
+    }
+
+    &__cta {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__container {
+      background-image: url("./images/right-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: -310px 90%;
+    }
+  }
+}

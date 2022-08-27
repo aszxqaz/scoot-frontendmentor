@@ -1,0 +1,44 @@
+@import '../global/utils.scss';
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--color-dim-grey);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Space Mono', monospace;
+  color: var(--color-dark-navy);
+}
+
+a, button {
+  font-family: 'Space Mono', monospace;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.heading-xl {
+  font-size: responsive(375px, 768px, 40px, 56px);
+  letter-spacing: -2.5px;
+  line-height: 1;
+}
+
+.heading-lg {
+  font-size: responsive(375px, 768px, 32px, 48px);
+  letter-spacing: -2.14px;
+  line-height: 1;
+}
+
+.heading-md {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -1.79px;
+}
+
+.heading-sm {
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: -1.07px;
+}

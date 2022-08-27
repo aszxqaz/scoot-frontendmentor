@@ -1,0 +1,88 @@
+@use '../global/utils.scss' as *;
+
+.mottos {
+  padding-top: responsive(375px, 1440px, 100px, 160px);
+  padding-bottom: 80px;
+
+  &__container {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 1048px) {
+      flex-direction: column;
+      gap: 40px;
+      max-width: 653px;
+    }
+  }
+
+  &__article {
+    &:last-child {
+      .motto-article__img {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+
+          top: calc(50% - 7.5px);
+          right: 100%;
+
+          height: 15px;
+          width: 70vw;
+
+          background-color: var(--color-light-grey);
+
+          @media (max-width: 1048px) {
+            right: calc(50%);
+            transform: rotate(90deg);
+            transform-origin: right center;
+          }
+
+          @media (max-width: 670px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.motto-article {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    margin-bottom: 30px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  &__heading {
+    margin-bottom: 27px;
+  }
+
+  &__content {
+  }
+
+  @media (max-width: 1048px) {
+    flex-direction: row;
+    gap: responsive(650px, 1048px, 40px, 80px);
+
+  }
+
+  @media (max-width: 670px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+
+    &__img {
+      display: grid;
+      place-items: center;
+
+      width: responsive(375px, 670px, 56px, 96px);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.promotion {
+  position: relative;
+
+  display: flex;
+
+  min-height: 300px;
+  background: url('./images/promotion-circles.svg'), linear-gradient(var(--color-dark-navy), var(--color-dark-navy));
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+
+  padding-top: 62px;
+  padding-bottom: 62px;
+
+  &__container {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__heading {
+    color: white;
+    max-width: 415px;
+  }
+
+  &__app-stores {
+    display: flex;
+    gap: 18px;
+  }
+
+  @media (max-width: 1200px) {
+    height: 320px;
+
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: 40px;
+    }
+  }
+
+}

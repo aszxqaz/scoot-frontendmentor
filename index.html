@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container container">
+      <button class="header__burger" id="burger"><img src="./images/burger.svg"></button>
+      <button class="header__burger-close hidden" id="burger-close"><img src="./images/burger-close.svg"></button>
+      <a class="header__logo" href="home"><img src="./images/scoot.svg" alt="Scoot logo" /></a>
+      <nav id="nav" class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a class="header__link" href="about">About</a></li>
+          <li class="header__item"><a class="header__link" href="location">Location</a></li>
+          <li class="header__item"><a class="header__link" href="careers">Careers</a></li>
+        </ul>
+      </nav>
+      <button class="header__cta button">Get Scootin</button>
+    </div>
+  </header>
+  <main>
+    <section data-page="home">
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h1 class="hero__heading heading-xl">Scooter sharing made simple</h1>
+            <!-- <div class="hero__with-placeholder">
+              <div class="hero__column"> -->
+            <p class="hero__text text">Scoot takes the hassle out of urban mobility. Our bikes are placed in
+              convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a
+              tap, and you’re away!</p>
+            <button class="hero__cta button">Get Scootin</button>
+          </div>
+          <!-- <div class="hero__placeholder"></div> -->
+          <!-- </div> -->
+          <!-- </div> -->
+        </div>
+      </section>
+      <section class="mottos">
+        <div class="mottos__container container">
+          <article class="mottos__article motto-article">
+            <div class="motto-article__img">
+              <img src="./images/locate.svg" alt="Image of device">
+            </div>
+            <div class="motto-article__content">
+              <h2 class="motto-article__heading heading-sm">Locate with app</h2>
+              <p class="motto-article__text text">Use the app to find the nearest scooter to you. We are continuously
+                placing scooters in the areas with most demand, so one should never be too far away.</p>
+            </div>
+          </article>
+          <article class="mottos__article motto-article">
+            <div class="motto-article__img">
+              <img src="./images/pick.svg" alt="Image of scooter">
+            </div>
+            <div class="motto-article__content">
+              <h2 class="motto-article__heading heading-sm">Pick your scooter</h2>
+              <p class="motto-article__text text">We show the most important info for the scooters closest to you. So
+                you
+                know how much charge they have left and can see roughly how much it will cost.</p>
+            </div>
+          </article>
+          <article class="mottos__article motto-article">
+            <div class="motto-article__img">
+              <img src="./images/enjoy.svg" alt="Image of scooter">
+            </div>
+            <div class="motto-article__content">
+              <h2 class="motto-article__heading heading-sm">Enjoy the ride</h2>
+              <p class="motto-article__text text">Scan the QR code and the bike will unlock. Retract the cable lock, put
+                on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps. </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="features">
+        <div class="features__container container">
+          <article class="features__feature feature">
+            <div class="feature__content">
+              <h3 class="feature__heading heading-lg">Easy to use riding telemetry</h3>
+              <p class="feature__text text">The Scoot app is available with riding telemetry. This means it can show you
+                your average speed, how long you've been using the scooter, your traveling distance, and many more
+                things
+                all in an easy to use app.</p>
+              <button class="button">Learn More</button>
+            </div>
+            <div class="feature__image">
+              <picture>
+                <source srcset="./images/telemetry.webp" type="image/webp">
+                <img src="./images/telemetry.jpg" alt="Telemetry image">
+              </picture>
+            </div>
+          </article>
+          <article class="features__feature feature">
+            <div class="feature__content">
+              <h3 class="feature__heading heading-lg">Coming to a city near you</h3>
+              <p class="feature__text text">Scoot is available in 4 major cities so far. We’re expanding rapidly, so be
+                sure
+                to let us know if you want to see us in your hometown. We’re aiming to let our scooters loose on 23
+                cities
+                over the coming year.</p>
+              <button class="button">Learn More</button>
+            </div>
+            <div class="feature__image">
+              <picture>
+                <source srcset="./images/city.webp" type="image/webp">
+                <img src="./images/city.jpg" alt="City image">
+              </picture>
+            </div>
+          </article>
+          <article class="features__feature feature">
+            <div class="feature__content">
+              <h3 class="feature__heading heading-lg">Zero hassle payments</h3>
+              <p class="feature__text text">Our payment is as easy as one two three. We accept most credit cards and
+                debit
+                cards. You can also link your PayPal account inside the app. Need to pay later? No worries! You can
+                defer
+                payment for up to a month.</p>
+              <button class="button">Learn More</button>
+            </div>
+            <div class="feature__image">
+              <picture>
+                <source srcset="./images/zero-payments.webp" type="image/webp">
+                <img src="./images/zero-payments.jpg" alt="No payments image">
+              </picture>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section data-page="about" class="none about">
+      <div class="about__heading-wrapper page-header" data-bg="./images/about.jpg" data-bg-webp="./images/about.webp">
+        <h1 class="about__heading heading-xl page-heading container">About</h1>
+      </div>
+      <section class="features container">
+        <article class="features__feature feature">
+          <div class="feature__content">
+            <h3 class="feature__heading heading-lg">Mobility for the digital era</h3>
+            <p class="feature__text text">Getting around should be simple (and even fun!) for everyone. We embrace
+              technology to provide low cost, smart access to scooters at your fingertips.</p>
+          </div>
+          <div class="feature__image">
+            <picture>
+              <source srcset="./images/mobility.webp" type="image/webp">
+              <img src="./images/mobility.jpg" alt="mobility image">
+            </picture>
+          </div>
+        </article>
+        <article class="features__feature feature">
+          <div class="feature__content">
+            <h3 class="feature__heading heading-lg">Better urban living</h3>
+            <p class="feature__text text">We’re helping connect cities and bring people closer together. Our scooters
+              are also fully-electric and we offset the minimal carbon footprint for each ride.</p>
+          </div>
+          <div class="feature__image">
+            <picture>
+              <source srcset="./images/urban.webp" type="image/webp">
+              <img src="./images/urban.jpg" alt="urban image">
+            </picture>
+          </div>
+        </article>
+      </section>
+      <section class="values container triple">
+        <h2 class="triple__heading heading-lg">Our values</h2>
+        <div class="triple__container">
+          <article class="triple__article triple-article">
+            <div class="triple-article__img">
+              <picture>
+                <source srcset="./images/tech.webp" type="image/webp">
+                <img src="./images/tech.jpg" alt="Smartphone image">
+              </picture>
+            </div>
+            <h4 class="triple-article__heading heading-sm">Our tech</h4>
+            <p class="triple-article__text text">We’re using cutting edge technology to drive accessible urban
+              transportation forward. Our fully electric scooters are a joy to ride!</p>
+          </article>
+          <article class="triple__article triple-article">
+            <div class="triple-article__img">
+              <picture>
+                <source srcset="./images/integrity.webp" type="image/webp">
+                <img src="./images/integrity.jpg" alt="Biker image">
+              </picture>
+            </div>
+            <h4 class="triple-article__heading heading-sm">Our integrity</h4>
+            <p class="triple-article__text text">We are fully committed to deliver a great yet safe, sustainable
+              micro-mobility experience in every city we serve.</p>
+          </article>
+          <article class="triple__article triple-article">
+            <div class="triple-article__img">
+              <picture>
+                <source srcset="./images/community.webp" type="image/webp">
+                <img src="./images/community.jpg" alt="People image">
+              </picture>
+            </div>
+            <h4 class="triple-article__heading heading-sm">Our community</h4>
+            <p class="triple-article__text text">We support every community we serve. All workers are paid a living wage
+              based on their location and are Scoot employees.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+    <section data-page="careers" class="none"></section>
+    <section data-page="location" class="none"></section>
+  </main>
+  <section class="promotion">
+    <div class="promotion__container container">
+      <h4 class="promotion__heading heading-lg">Sign Up and Scoot off today</h4>
+      <div class="promotion__app-stores">
+        <a href="app-store" aria-label="Go to App Store"><img src="./images/app-store.svg" alt="App Store"></a>
+        <a href="google-play" aria-label="Go to Google Play"><img src="./images/google-play.svg" alt="Google Play"></a>
+      </div>
+    </div>
+    <div class="promotion__circles">
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__logo">
+        <img src="./images/footer-logo.svg" alt="Scoot logo">
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="about" class="footer__link">About</a></li>
+          <li class="footer__item"><a href="location" class="footer__link">Location</a></li>
+          <li class="footer__item"><a href="careers" class="footer__link">Careers</a></li>
+        </ul>
+      </nav>
+      <ul class="footer__socials">
+        <li class="footer__social"><a class="footer__social-link"><img src="./images/facebook.svg"
+              alt="Facebook logo"></a></li>
+        <li class="footer__social"><a class="footer__social-link"><img src="./images/twitter.svg"
+              alt="Twitter logo"></a></li>
+        <li class="footer__social"><a class="footer__social-link"><img src="./images/instagram.svg"
+              alt="Instagram logo"></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

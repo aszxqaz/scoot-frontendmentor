@@ -1,0 +1,26 @@
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 1186px;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.page-header {
+  height: 200px;
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-heading {
+  text-align: left;
+  color: white;
+  width: 100%;
+}
