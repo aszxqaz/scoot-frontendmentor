@@ -1,43 +1,48 @@
-export function hashrouterInit() {
-  // const sectionName = window.location.hash.slice(1);
-  // console.log(window.location);
-  // const section = document.querySelector(`[data-page="${sectionName}"]`);
-  // if (section) {
-  //   for (const el of Array.from(document.querySelectorAll(`[data-page]`))) {
-  //     if (el === section) {
-  //       el.classList.remove('none');
-  //       continue;
-  //     }
-  //     el.classList.add('none');
-  //   }
-  // }
-}
+export class HashRouter {
+  private $pages
+  private pagesNames
+  private $anchors
 
-export function initLinks() {
-  const sections = Array.from(document.querySelectorAll(`[data-page]`));
-  const pages = sections.map((section) => section.getAttribute('data-page'));
+  constructor() {
+    this.$pages = Array.from(document.querySelectorAll(`[data-page]`));
+    this.pagesNames = this.$pages.map((page) => page.getAttribute('data-page'));
+    this.$anchors = Array.from(document.querySelectorAll(`a`));
+    this.initAnchors()
+    this.goToInitialPage()
+  }
 
-  const anchors = Array.from(document.querySelectorAll(`a`));
-  console.log(sections)
-  console.log(pages)
-  console.log(anchors)
+  private goToInitialPage() {
+    if (window.location.pathname) {
+      this.goTo(window.location.pathname.slice(1))
+    }
+  }
 
-  anchors.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      const href = (e.target as HTMLAnchorElement).closest('a')?.getAttribute('href')
-      console.log(e.target)
-      const index = pages.findIndex(page => page === href)
-      if (index !== -1) {
-        e.preventDefault();
-        for (const el of sections) {
-          if (el === sections[index]) {
-            el.classList.remove('none');
-            continue;
-          }
-          el.classList.add('none');
+  private initAnchors() {
+    this.$anchors.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const href = (e.target as HTMLAnchorElement).closest('a')?.getAttribute('href')
+        const isSameSite = this.goTo(href || '')
+        if (isSameSite) {
+          window.scrollTo({ top: 0, behavior: "auto"})
+          e.preventDefault();
         }
-        window.history.pushState("", "", `/${pages[index]}`);
-      }
+      });
     });
-  });
+  }
+
+  goTo(href: string) {
+    const index = this.pagesNames.findIndex(name => name === href)
+    if (index !== -1) {
+      for (const page of this.$pages) {
+        if (page === this.$pages[index]) {
+          page.classList.remove('none');
+          continue;
+        }
+        page.classList.add('none');
+      }
+      window.history.pushState("", "", `/${this.pagesNames[index]}`);
+      return true
+    }
+    return false
+  }
 }

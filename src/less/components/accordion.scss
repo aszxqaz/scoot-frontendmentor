@@ -1,0 +1,32 @@
+.accordion-collapse {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: height;
+  transition: all 0.3s ease-out;
+
+  .accordion-item.open & {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.accordion-icon {
+  display: flex;
+  align-items: center;
+
+  transition: transform 0.3s ease-out;
+  transform-origin: center;
+
+  .accordion-item.open & {
+    transform: rotate(180deg);
+  }
+}
+
+.accordion-item {
+  margin-bottom: 16px;
+
+  &:not(.open)>*:first-child {
+    margin-bottom: 0;
+  }
+}

@@ -2,10 +2,9 @@ import './less/main.scss';
 
 import './webp.js';
 import { burgerInit } from './burger';
-import { hashrouterInit, initLinks } from './hashrouter';
-
+import { HashRouter } from './hashrouter';
+import './accordion';
 
 burgerInit();
-initLinks()
 
-hashrouterInit()
+const hashrouter = new HashRouter()
