@@ -44,8 +44,6 @@
   &__cta {
   }
 
-  /** Media Query */
-
   @media (max-width: 768px) {
     position: sticky;
     top: 0;
@@ -84,9 +82,8 @@
 
       margin-left: 0;
 
-      
       transition: all 0.2s ease-in;
-      
+
       &.opened {
         visibility: visible;
         background-color: rgb(0 0 0 / 75%);
@@ -124,9 +121,14 @@
 
     &__cta {
       position: fixed;
+      z-index: 1;
       bottom: 24px;
-      left: 32px;
-      transform: translateX(-100%);
+      left: -100%;
+      transition: all 0.4s ease-in;;
+
+      .header__nav.opened +& {
+        left: 32px;
+      }
     }
   }
 }
